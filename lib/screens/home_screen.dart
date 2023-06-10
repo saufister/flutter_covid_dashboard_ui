@@ -84,16 +84,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    FlatButton.icon(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
-                        horizontal: 20.0,
-                      ),
+                    TextButton.icon(
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 10.0,
+                            horizontal: 20.0,
+                          ),
+                          backgroundColor: Colors.red,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          textStyle: TextStyle(color: Colors.white)),
                       onPressed: () {},
-                      color: Colors.red,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
                       icon: const Icon(
                         Icons.phone,
                         color: Colors.white,
@@ -102,18 +104,23 @@ class _HomeScreenState extends State<HomeScreen> {
                         'Call Now',
                         style: Styles.buttonTextStyle,
                       ),
-                      textColor: Colors.white,
+                      //textColor: Colors.white,
                     ),
-                    FlatButton.icon(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 10.0,
-                        horizontal: 20.0,
+                    TextButton.icon(
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 10.0,
+                          horizontal: 20.0,
+                        ),
+                        backgroundColor: Colors.blue,
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
                       ),
                       onPressed: () {},
-                      color: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
                       icon: const Icon(
                         Icons.chat_bubble,
                         color: Colors.white,
@@ -122,7 +129,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         'Send SMS',
                         style: Styles.buttonTextStyle,
                       ),
-                      textColor: Colors.white,
                     ),
                   ],
                 ),
